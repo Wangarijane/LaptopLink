@@ -1,6 +1,6 @@
 // src/components/auth/RoleSelector.jsx
 const RoleSelector = ({ selectedRole, onChange }) => {
-  const roles = ["student", "admin", "donor"];
+  const roles = ["student", "donor"];
 
   return (
     <div className="flex justify-center gap-4 flex-wrap mb-6 animate-fadeIn">
