@@ -1,52 +1,196 @@
-# MERN Stack Capstone Project
+# 💻 LaptopLink – MERN Capstone Project
 
-This assignment focuses on designing, developing, and deploying a comprehensive full-stack MERN application that showcases all the skills you've learned throughout the course.
+**LaptopLink** is a donation and sponsorship platform built using the MERN stack. It connects students in need of laptops with donors and sponsors who want to help. The platform is designed with different roles (admin, student, donor) and includes features such as authentication, application tracking, role-based dashboards, and a responsive UI.
 
-## Assignment Overview
+---
 
-You will:
-1. Plan and design a full-stack MERN application
-2. Develop a robust backend with MongoDB, Express.js, and Node.js
-3. Create an interactive frontend with React.js
-4. Implement testing across the entire application
-5. Deploy the application to production
+## 🚀 Live Demo
 
-## Getting Started
+🌐 **Frontend**: [https://laptoplink.vercel.app](https://week-8-capstone-wangarijane.vercel.app/)  
+🔗 **Backend**: [https://laptoplink-api.onrender.com](https://laptoplink-backend.onrender.com)
 
-1. Accept the GitHub Classroom assignment
-2. Clone the repository to your local machine
-3. Follow the instructions in the `Week8-Assignment.md` file
-4. Plan, develop, and deploy your capstone project
+---
 
-## Files Included
+## 🧠 Project Overview
 
-- `Week8-Assignment.md`: Detailed assignment instructions
+LaptopLink was created as a real-world solution for students who lack access to digital learning tools, particularly laptops. It simplifies the donation and sponsorship process while giving administrators full control over tracking, approvals, and logistics.
 
-## Requirements
+---
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git and GitHub account
-- Accounts on deployment platforms (Render/Vercel/Netlify/etc.)
+## 🛠️ Tech Stack
 
-## Project Ideas
+**Frontend**: React, Tailwind CSS, Vite  
+**Backend**: Node.js, Express.js  
+**Database**: MongoDB  
+**Auth**: JWT-based Authentication  
+**Dev Tools**: Vercel (Frontend), Render (Backend), Postman, GitHub
 
-The `Week8-Assignment.md` file includes several project ideas, but you're encouraged to develop your own idea that demonstrates your skills and interests.
+---
 
-## Submission
+## 📁 Folder Structure
 
-Your project will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+```
+week-8-capstone_-Wangarijane/
+│
+├── client/                     # Frontend (React + Vite + Tailwind)
+│   ├── public/
+│   ├── src/
+│   │   ├── api/               # Axios setup + API calls
+│   │   ├── assets/            # Images, logos, icons
+│   │   ├── components/        # Reusable UI components
+│   │   ├── context/           # Global context (e.g. Auth, Theme)
+│   │   ├── hooks/             # Custom hooks (e.g. useAuth)
+│   │   ├── layouts/           # Shared page layouts (AuthLayout, MainLayout)
+│   │   ├── pages/             # All routes/pages (Home, Register, etc.)
+│   │   ├── routes/            # React Router configs
+│   │   ├── utils/             # Helper functions (e.g. validators)
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   ├── index.css
+│   │   ├── App.css
+│   ├── .env                   # Frontend environment variables
+│   ├── vite.config.js
+│   ├── tailwind.config.js
+│   ├── postcss.config.mjs
+│   ├── package.json
+│   └── README.md
+│
+├── server/                    # Backend (Express + MongoDB + JWT)
+│   ├── config/                # DB config & other setup
+│   ├── controllers/           # Route logic
+│   ├── middleware/            # Auth, error handler, etc.
+│   ├── models/                # Mongoose schemas
+│   ├── routes/                # All route files (authRoutes, studentRoutes, etc.)
+│   ├── utils/                 # JWT, file handling, etc.
+│   ├── server.js              # App entry point
+│   ├── .env                   # Backend environment variables
+│   ├── .env.example           # Sample env file
+│   ├── .gitignore
+│   ├── package.json
+│   └── pnpm-lock.yaml
+│
+├── README.md
+└── .gitignore                 # Optional global gitignore
 
-1. Commit and push your code regularly
-2. Include comprehensive documentation
-3. Deploy your application and add the live URL to your README.md
-4. Create a video demonstration and include the link in your README.md
+```
 
-## Resources
+---
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [GitHub Classroom Guide](https://docs.github.com/en/education/manage-coursework-with-github-classroom) 
+## 🔐 Roles and Permissions
+
+| Role     | Permissions                                      |
+|----------|--------------------------------------------------|
+| **Admin**   | Full control: user management, approvals, donations tracking, etc. *(Private Role – Cannot be registered manually)* |
+| **Student** | Register, apply for a laptop, track application status |
+| **Donor**   | Subscribe, sponsor laptops, send donations     |
+
+---
+
+## ✅ Completed Features
+
+- [x] Admin, Donor, and Student roles
+- [x] JWT authentication & protected routes
+- [x] Role-based dashboards
+- [x] User registration and login
+- [x] Responsive frontend (React + Tailwind)
+- [x] Backend deployed on Render
+- [x] Frontend deployed on Vercel
+- [x] Project structure using best practices
+
+---
+
+## 🧩 What's Left To Do (To Be Completed)
+
+- [ ] Complete full donor logic and routes on backend
+- [ ] Implement donor subscription + payment gateway integration
+- [ ] Add donation tracking and analytics for admins
+- [ ] Implement application approval/rejection logic
+- [ ] Add file uploads (e.g., student documents)
+- [ ] Build student application submission form
+- [ ] Enable messaging or email notifications between roles
+- [ ] Implement unit and integration tests
+- [ ] Add CI/CD (GitHub Actions or similar)
+- [ ] Add admin dashboard analytics/charts
+- [ ] Add end-to-end tests using Cypress or Playwright
+- [ ] Complete final video presentation and demo
+- [ ] Finalize API documentation and usage guide
+
+---
+
+## 📷 Screenshots/
+
+[screenshort](<img width="1920" height="915" alt="image" src="https://github.com/user-attachments/assets/703daae6-bb56-49e3-9f8c-d830378cb4fe" />
+)
+
+---
+
+## 🧪 Testing Plan
+
+- Unit tests for critical backend utilities and frontend components
+- Integration tests for key API endpoints
+- Manual testing across Chrome, Firefox, and Edge (Desktop + Mobile)
+- Accessibility checks with Lighthouse
+
+---
+
+## 📄 Setup Instructions
+
+### 🔧 Backend
+```bash
+cd server
+pnpm install
+pnpm run dev
+```
+Set up .env in /server:
+```
+PORT=5000
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+```
+
+---
+
+## 🌐 Frontend
+
+```bash
+cd client
+pnpm install
+pnpm run dev
+```
+Set up .env in /client:
+
+```
+VITE_API_URL=https://your-backend-url.onrender.com
+```
+
+---
+
+## 📦 Deployment
+- Backend: Render
+
+- Frontend: Vercel
+
+- CI/CD connected to GitHub for both.
+
+---
+
+## 🎥 Demo Video
+🔗 Coming soon...
+(A 5–10 min walkthrough video showcasing all features will be added here.)
+
+---
+
+## 👩🏽‍💻 Author
+Jane Muriithi – Full-Stack MERN Developer
+Capstone Project for Week 8 of [Power Learn Project]
+
+---
+
+## 📜 License
+MIT License
+
+---
+
+## 📝 Acknowledgements
+Thanks to the instructors and the entire MERN course team for their support and guidance throughout this journey.
+
