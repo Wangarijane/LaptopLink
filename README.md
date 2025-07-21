@@ -121,7 +121,7 @@ week-8-capstone_-Wangarijane/
 
 ### ✅ Landing Page
 
-![Landing Page](<img width="1920" height="915" alt="image" src="https://github.com/user-attachments/assets/aa978613-13d1-40de-9982-03b4039e7618" />
+![Landing Page](<img width="1920" height="915" alt="Screenshot 2025-07-21 182426" src="https://github.com/user-attachments/assets/b32aec74-0260-466b-9069-28894f77db93" />
 )
 
 ---
@@ -184,7 +184,7 @@ VITE_API_URL=https://your-backend-url.onrender.com
 
 ## 👩🏽‍💻 Author
 Jane Muriithi – Full-Stack MERN Developer
-Capstone Project for Week 8 of [Power Learn Project]
+Capstone Project for Week 8 of Power Learn Project
 
 ---
 
