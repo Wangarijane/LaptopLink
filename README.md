@@ -121,7 +121,8 @@ week-8-capstone_-Wangarijane/
 
 ### ✅ Landing Page
 
-![Landing Page](./assets/landing-page.png)
+![Landing Page](<img width="1920" height="915" alt="Screenshot 2025-07-21 182426" src="https://github.com/user-attachments/assets/e4aa8cf7-1089-4ffa-a185-90a0a7909d0e" />
+)
 
 ---
 
