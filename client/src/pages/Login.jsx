@@ -15,7 +15,7 @@ const Login = () => {
 
   const handleLogin = async ({ email, password }) => {
     const response = await axios.post(
-      `${import.meta.env.VITE_API_URL}/users/login`,
+      `${import.meta.env.VITE_API_URL}/api/users/login`,
       { email, password, role },
       {
         headers: { "Content-Type": "application/json" },
