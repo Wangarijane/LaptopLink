@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import StudentSidebar from '../../components/Student/StudentSidebar';
+import StudentSidebar from '../../components/student/StudentSidebar';
 import { Outlet } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 
