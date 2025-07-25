@@ -1,7 +1,7 @@
 // src/pages/Login.jsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import API from '../api/axios';
 
 import RoleSelector from "../components/auth/RoleSelector";
 import LoginForm from "../components/auth/LoginForm";
@@ -14,8 +14,8 @@ const Login = () => {
   const { login } = useAuth(); // get login function from context
 
   const handleLogin = async ({ email, password }) => {
-    const response = await axios.post(
-      `${import.meta.env.VITE_API_URL}/api/users/login`,
+    const response = await API.post(
+      `/api/users/login`,
       { email, password, role },
       {
         headers: { "Content-Type": "application/json" },

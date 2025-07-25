@@ -1,3 +1,4 @@
+// server.js
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
@@ -13,9 +14,29 @@ connectDB();
 
 const app = express();
 
-// Middleware
-app.use(cors());
-app.use(express.json()); // For parsing JSON request bodies
+// Allowed origins
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://laptoplink.vercel.app',
+];
+
+// CORS middleware with credentials support
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Allow requests with no origin (like mobile apps or curl)
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true,
+  })
+);
+
+// Middleware to parse JSON bodies
+app.use(express.json());
 
 // API Routes
 app.use('/api/users', userRoutes);

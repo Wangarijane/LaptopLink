@@ -25,3 +25,6 @@ dist-ssr
 
 # Local environment variables
 .env
+
+# Production environment variables
+.env.production

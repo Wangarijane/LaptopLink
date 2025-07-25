@@ -1,5 +1,6 @@
 // src/components/auth/RegisterForm.jsx
 import { useState } from "react";
+import API from "../../api/axios";
 
 const RegisterForm = ({ role }) => {
   const [formData, setFormData] = useState({
@@ -19,19 +20,17 @@ const RegisterForm = ({ role }) => {
     setSuccess("");
 
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/users/register`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, role }),
+      const { data } = await API.post("/api/users/register", {
+        ...formData,
+        role,
       });
 
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.message || "Registration failed");
-
-      setSuccess("Registration successful!");
+      setSuccess(data.message || "Registration successful!");
       setFormData({ name: "", email: "", password: "" });
-    } catch (error) {
-      setError(error.message);
+    } catch (err) {
+      setError(
+        err.response?.data?.message || "Registration failed. Please try again."
+      );
     }
   };
 
