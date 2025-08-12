@@ -1,4 +1,3 @@
-// src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 
@@ -9,8 +8,8 @@ import Login from "./pages/Login";
 
 // Dashboard Routes
 import AdminDashboard from "./pages/AdminDashboard";
-import DonorDashboard from "./pages/DonorDashboard";
-import StudentRoutes from "./routes/studentRoutes"; // ✅ Import your nested student routes
+import StudentRoutes from "./routes/studentRoutes"; 
+import DonorRoutes from "./routes/donorRoutes"; 
 
 // Auth
 import ProtectedRoute from "./components/auth/ProtectedRoute";
@@ -34,19 +33,21 @@ const App = () => {
               </ProtectedRoute>
             }
           />
+
           <Route
             path="/dashboard/student/*"
             element={
               <ProtectedRoute allowedRole="student">
-                <StudentRoutes /> {/* ✅ This handles nested student routes */}
+                <StudentRoutes />
               </ProtectedRoute>
             }
           />
+
           <Route
-            path="/dashboard/donor"
+            path="/dashboard/donor/*"
             element={
               <ProtectedRoute allowedRole="donor">
-                <DonorDashboard />
+                <DonorRoutes />
               </ProtectedRoute>
             }
           />
